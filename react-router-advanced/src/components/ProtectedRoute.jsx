@@ -1,8 +1,8 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 
-const ProtectedRoute = ({ element: Component, isAuthenticated, ...rest }) => {
-  return isAuthenticated ? <Component {...rest} /> : <Navigate to="/login" />;
+const ProtectedRoute = ({ element: Component, useAuth, ...rest }) => {
+  return useAuth ? <Component {...rest} /> : <Navigate to="/login" />;
 };
 
 export default ProtectedRoute;
