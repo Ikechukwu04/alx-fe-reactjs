@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "name": "react-query-demo",
+=======
   "name": "form-handling-react",
+>>>>>>> 2cb0d83465f3fce5e48cee480ba760d203c4f98a
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,9 +14,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-query": "^3.39.3"
+=======
     "formik": "^2.4.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+>>>>>>> 2cb0d83465f3fce5e48cee480ba760d203c4f98a
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
