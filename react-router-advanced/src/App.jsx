@@ -23,7 +23,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile/*" element={<Profile />} />
-      <Route path="/blog/:postId" element={<Blog />} />
+      <Route path="/blog/:id", "BlogPost" element={<Blog />} />
       <Route path="/profile/*" element={<ProtectedRoute element={Profile} isAuthenticated={isAuthenticated} />} />
     </Routes>
   </Router>
