@@ -39,8 +39,8 @@ const AddRecipeForm = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
-      <h2 className="text-3xl font-bold mb-6">Add a New Recipe</h2>
+    <div className="max-w-lg mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg md:max-w-2xl"> {/* md:max-w-2xl for larger form on medium screens */}
+      <h2 className="text-3xl font-bold mb-6 text-center md:text-left">Add a New Recipe</h2> {/* md:text-left for alignment on medium screens */}
       <form onSubmit={handleSubmit}>
         {/* Recipe Title Input */}
         <div className="mb-4">
@@ -56,7 +56,7 @@ const AddRecipeForm = () => {
         </div>
 
         {/* Ingredients Input */}
-        <div className="mb-4">
+        <div className="mb-4 md:mb-6">
           <label htmlFor="ingredients" className="block text-gray-700 font-medium mb-2">Ingredients (separate each ingredient by a new line)</label>
           <textarea
             id="ingredients"
@@ -69,7 +69,7 @@ const AddRecipeForm = () => {
         </div>
 
         {/* Preparation Steps Input */}
-        <div className="mb-4">
+        <div className="mb-4 md:mb-6">
           <label htmlFor="steps" className="block text-gray-700 font-medium mb-2">Preparation Steps</label>
           <textarea
             id="steps"
@@ -85,7 +85,7 @@ const AddRecipeForm = () => {
         <div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200"
+            className="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-200 md:w-1/3 md:mx-auto"
           >
             Submit Recipe
           </button>
