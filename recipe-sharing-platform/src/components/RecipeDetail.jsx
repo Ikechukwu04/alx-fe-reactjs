@@ -25,7 +25,7 @@ const RecipeDetail = () => {
       <img
         src={recipe.image}
         alt={recipe.title}
-        className="w-full h-64 object-cover rounded-lg mb-6"
+        className="w-full h-64 object-cover rounded-lg mb-6 shadow-md mb-6"
       />
       <p className="text-lg text-gray-700 mb-4">{recipe.summary}</p>
 
@@ -33,6 +33,7 @@ const RecipeDetail = () => {
       <ul className="list-disc list-inside mb-4">
         {recipe.ingredients?.map((ingredient, index) => (
           <li key={index} className="text-gray-600">{ingredient}</li>
+      <div className="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
         ))}
       </ul>
 
