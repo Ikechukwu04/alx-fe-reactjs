@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { fetchUserData } from '../services/githubService';
 
 const Search = () => {
-  const [username, setUsername] = useState(''); // State for the search input
-  const [userData, setUserData] = useState(null); // State for storing user data
-  const [loading, setLoading] = useState(false); // Loading state
-  const [error, setError] = useState(''); // Error state
-   const [Looks like we can’t find the user] = useState('');
+  const [username, setUsername] = useState(''); 
+  const [userData, setUserData] = useState(null); 
+  const [loading, setLoading] = useState(false); 
+  const [error, setError] = useState(''); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +17,7 @@ const Search = () => {
       const data = await fetchUserData(username);
       setUserData(data);
     } catch (err) {
-      setError('Looks like we can’t find the user.');
+      setError('Looks like we can’t find the user');
     } finally {
       setLoading(false);
     }
