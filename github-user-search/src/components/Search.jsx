@@ -6,6 +6,7 @@ const Search = () => {
   const [userData, setUserData] = useState(null); // State for storing user data
   const [loading, setLoading] = useState(false); // Loading state
   const [error, setError] = useState(''); // Error state
+   const [Looks like we can’t find the user] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
