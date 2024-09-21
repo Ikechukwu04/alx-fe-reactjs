@@ -17,7 +17,7 @@ const Search = () => {
 
     try {
         const data = await fetchAdvancedUserData(username, location, repos);
-        setUserData(data.items);
+        setUserData(data.map);
     } catch (err) {
       setError('Looks like we cant find the user');
     } finally {
