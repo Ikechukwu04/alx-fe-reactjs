@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { fetchUserData } from '../services/githubService';
+import { fetchAdvancedUserData } from '../services/githubService';
 
 const Search = () => {
   const [username, setUsername] = useState(''); 
-  const [userData, setUserData] = useState(null); 
+  const [userData, setUserData] = useState([]); 
   const [loading, setLoading] = useState(false); 
   const [error, setError] = useState(''); 
   const [location, setLocation] = useState('');
@@ -13,7 +13,7 @@ const Search = () => {
     e.preventDefault();
     setLoading(true);
     setError('');
-    setUserData(null);
+    setUserData([]);
 
     try {
         const data = await fetchAdvancedUserData(username, location, repos);
