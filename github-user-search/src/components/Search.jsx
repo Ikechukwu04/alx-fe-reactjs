@@ -6,6 +6,8 @@ const Search = () => {
   const [userData, setUserData] = useState(null); 
   const [loading, setLoading] = useState(false); 
   const [error, setError] = useState(''); 
+  const [location, setLocation] = useState('');
+  const [repos, setRepos] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,8 +16,8 @@ const Search = () => {
     setUserData(null);
 
     try {
-      const data = await fetchUserData(username);
-      setUserData(data);
+        const data = await fetchAdvancedUserData(username, location, repos);
+        setUserData(data.items);
     } catch (err) {
       setError('Looks like we cant find the user');
     } finally {
@@ -31,6 +33,20 @@ const Search = () => {
           placeholder="Search GitHub User"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+        />
+         <input
+          type="text"
+          placeholder="Location (Optional)"
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+          className="border p-2 rounded"
+        />
+         <input
+          type="number"
+          placeholder="Minimum Repositories (Optional)"
+          value={repos}
+          onChange={(e) => setRepos(e.target.value)}
+          className="border p-2 rounded"
         />
         <button type="submit">Search</button>
       </form>
